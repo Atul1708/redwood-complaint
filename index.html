@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedGear</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Lora&family=Open+Sans&family=Passions+Conflict&family=Playfair+Display+SC&family=Poppins:wght@300;400;500&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/921db93c72.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="rg.jpeg" alt="">
+        </nav>
+    </header>
+
+    <section class="video">
+        <iframe src="https://www.youtube.com/embed/7AR3cxsoh24" title="Redgear Replacement Process" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </section>
+
+    <div class="btn">
+        <a href="form.html" target="_blank"><button id="form">Register a Complaint</button></a>
+        <button id="text">Check Status of Ticket</button>
+    </div>
+
+    <div class="ticket">
+        <form>
+            <div class="inpt-grp">
+                <input type="text" id="number" required>
+                <label for="number">Ticket Number</label>
+            </div>
+            <button class="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>2018 &copy; RedWood</p>
+            <a href="">Privacy Policy</a>
+            <span>|</span>
+            <a href="">Term of Services</a>
+        </div>
+    </footer>
+
+
+    <script>
+        const button = document.querySelector('#text');
+        button.addEventListener('click', () => {
+            const inpt_grp = document.querySelector('.ticket').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

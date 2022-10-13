@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --b1: #dfba49;
+    --b1-border: #dbb233;
+    --b2: #F3565D;
+    --b2-border: #f13e46;
+    --b3: #45B6AF;
+    --b3-border: #3ea49d;
+    --footer: #272626;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.navbar {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+}
+
+.navbar img {
+    width: 10%;
+}
+
+/* video section */
+.video {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.video iframe {
+    width: 50%;
+    min-height: 70vh;
+}
+
+/* buttons */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn a #form {
+    /* width: 100%; */
+    background-color: var(--b1);
+    color: white;
+    padding: .625rem 1rem;
+    font-size: 1rem;
+    line-height: 1.3333333;
+    border: 1px solid var(--b1-border);
+}
+
+.btn a #form:hover {
+    background-color: var(--b1-border);
+}
+
+.btn button:not(:first-child) {
+    background-color: var(--b2);
+    color: white;
+    padding: .625rem 1rem;
+    font-size: 1rem;
+    line-height: 1.3333333;
+    border: 1px solid var(--b2-border);
+}
+
+.btn button:hover:not(:first-child) {
+    background-color: var(--b2-border);
+}
+
+.ticket {
+    display: none;
+    padding: 0 5rem;
+}
+
+.inpt-grp {
+    width: 100%;
+    position: relative;
+    margin: 2rem 0;
+
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid lightgray;
+}
+
+button.submit {
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--b3);
+    outline: none;
+    color: white;
+    border: 1px solid var(--b3-border);
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: gray;
+    cursor: text;
+    font-size: .8rem;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -35px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: var(--footer);
+}
+
+.footer {
+    padding: 0 3rem;
+    display: flex;
+    gap: 5px;
+
+}
+
+footer p {
+    color: lightgray;
+    font-size: .7rem;
+}
+
+footer a {
+    color: lightgray;
+    font-size: .7rem;
+}
+
+span {
+    color: lightgray;
+    font-size: .7rem;
+}
+
+footer a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* media query */
+
+@media (min-width:100px) and (max-width:300px) {
+    .navbar img {
+        width: 30%;
+    }
+
+    .video {
+        padding: 1.4rem;
+    }
+
+    .video iframe {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn button {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .btn a #form {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    span {
+        display: none;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .ticket {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar img {
+        width: 30%;
+    }
+
+    .video {
+        padding: 1.4rem;
+    }
+
+    .video iframe {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn button {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .btn a #form {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    span {
+        display: none;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .ticket {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    .navbar img {
+        width: 20%;
+    }
+
+    .video {
+        padding: 1.8rem;
+    }
+
+    .video iframe {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn button {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .btn a #form {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .navbar img {
+        width: 15%;
+    }
+
+    .video {
+        padding: 2rem;
+    }
+
+    .video iframe {
+        width: 90%;
+        min-height: 60vh;
+    }
+
+}
